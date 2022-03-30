@@ -67,9 +67,9 @@ margin-top: .8rem;
   vertical-align: middle;
 }
 .circle1{
-  position: absolute;
-width: 776.23px;
-height: 783.37px;
+position: absolute;
+width: 76.23px;
+height: 83.37px;
 left: -348.26px;
 top: 450.35px;
 background: rgba(255, 163, 132, 0.75);
@@ -78,10 +78,10 @@ border-radius: 40rem;
 }
 .circle2{
   position: absolute;
-width: 438.86px;
-height: 470.15px;
-left: 180.16px;
-top: 700px;
+width: 330px;
+height: 330px;
+left: 15px;
+top: 400px;
 background: rgba(246, 147, 141, 0.85);
 transform: rotate(0.57deg);
 border-radius: 40rem;
@@ -90,8 +90,8 @@ border-radius: 40rem;
   position: absolute;
 width: 272.23px;
 height: 281.41px;
-left: 81.78px;
-top: 580px;
+left: 180px;
+top: 535px;
 background: rgba(255, 182, 63, 0.75);
 transform: rotate(0.57deg);
 border-radius: 40rem;
