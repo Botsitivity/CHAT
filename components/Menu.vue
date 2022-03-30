@@ -1,9 +1,12 @@
 <template>
-<Menu />
+<div></div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'NuxtMenu'
 }
 </script>
+<style scoped>
+
+</style>
