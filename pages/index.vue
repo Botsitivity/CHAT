@@ -1,104 +1,123 @@
 <template>
-<div class="chat">
-<Menu />
-<h2 class="top">CHAT WITH BOPY!</h2>
-        <div id="form-input"> 
-            <input type="text" id="text" placeholder="Send Bopy a Message!">
-        </div>
-<button class="send"></button>
+  <div class="chat">
+    <Menu />
+    <h2 class="top">CHAT WITH BOPY!</h2>
 
-<div class="circle1"></div>
-<div class="circle2"></div>
-<div class="circle3"></div>
-</div>
+    <div>
+      <p v-for="message in messages" :key="message.content">{{ message.content }}</p>
+    </div>
 
+    <div id="form-input"> 
+      <input type="text" id="text" placeholder="Send Bopy a Message!" v-model="currentMessage">
+    </div>
+    <button class="send" @click="sendMessage(currentMessage)"></button>
+
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  data () {
+    return {
+      currentMessage: null
+    }
+  },
+  computed: {
+    messages () {
+      return this.$store.state.messages
+    }
+  },
+  methods: {
+    sendMessage (message) {
+      this.$store.dispatch('sendMessage', message)
+    }
+  }
 }
 </script>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-.top{
-font-family: 'Staatliches', cursive;
-  margin-top: 7rem;
-font-style: normal;
-font-weight: 400;
-font-size: 64px;
-line-height: 80px;
-text-align: center;
-}
-.send{ 
-color: white;
-border-radius: 40rem;
-position: absolute;
-width: 61px;
-height: 61px;
-left: 92%;
-bottom: 2rem;
-background: #FF653F;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+.top {
+  font-family: 'Staatliches', cursive;
+  margin-top: 7rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+  text-align: center;
 }
-#form-input{
+.send { 
+  color: white;
+  border-radius: 40rem;
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  left: 92%;
+  bottom: 2rem;
+  background: #FF653F;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#form-input {
   z-index: 1;
   position: absolute;
-width: 85%;
-height: 61px;
-left: 68px;
-bottom: 2rem;
-background: #DCDCDC;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 45px;
+  width: 85%;
+  height: 61px;
+  left: 68px;
+  bottom: 2rem;
+  background: #DCDCDC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 45px;
 }
-#text{
+#text {
   color: black;
-background-color: transparent;
-font-family: 'Inter', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-weight: bolder;
-font-size: 24px;
-width: 85%;
-margin-left: 2rem;
-margin-top: .8rem;
+  background-color: transparent;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-weight: bolder;
+  font-size: 24px;
+  width: 85%;
+  margin-left: 2rem;
+  margin-top: .8rem;
   vertical-align: middle;
 }
-#text:active{
+#text:active {
   border: none;
 }
-.circle1{
-position: absolute;
-width: 20rem;
-height: 20rem;
-left: 15rem;
-top: 19rem;
-background: rgba(255, 163, 132, 0.75);
-transform: rotate(0.57deg);
-border-radius: 40rem;
-}
-.circle2{
+.circle1 {
   position: absolute;
-width: 330px;
-height: 330px;
-left: 15px;
-top: 400px;
-background: rgba(246, 147, 141, 0.85);
-transform: rotate(0.57deg);
-border-radius: 40rem;
+  width: 20rem;
+  height: 20rem;
+  left: 15rem;
+  top: 19rem;
+  background: rgba(255, 163, 132, 0.75);
+  transform: rotate(0.57deg);
+  border-radius: 40rem;
 }
-.circle3{
+.circle2 {
   position: absolute;
-width: 272.23px;
-height: 281.41px;
-left: 180px;
-top: 535px;
-background: rgba(255, 182, 63, 0.75);
-transform: rotate(0.57deg);
-border-radius: 40rem;
+  width: 330px;
+  height: 330px;
+  left: 15px;
+  top: 400px;
+  background: rgba(246, 147, 141, 0.85);
+  transform: rotate(0.57deg);
+  border-radius: 40rem;
 }
-
+.circle3 {
+  position: absolute;
+  width: 272.23px;
+  height: 281.41px;
+  left: 180px;
+  top: 535px;
+  background: rgba(255, 182, 63, 0.75);
+  transform: rotate(0.57deg);
+  border-radius: 40rem;
+}
 </style>
