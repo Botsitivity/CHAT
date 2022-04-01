@@ -4,7 +4,7 @@
     <h2 class="top">CHAT WITH BOPY!</h2>
 
     <div>
-      <p v-for="message in messages" :key="message.content">{{ message.content }}</p>
+      <p v-for="message in messages" :key="message.time">{{ message.message }}</p>
     </div>
 
     <div id="form-input"> 
