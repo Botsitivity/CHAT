@@ -10,7 +10,7 @@
             <li><NuxtLink to="/" class="menuText specialText">BOTSITIVITY</NuxtLink></li>
         </ul>
         <ul class="menuSections">
-            <li><NuxtLink to="/" class="menuText">SIGNUP</NuxtLink></li>
+            <li><NuxtLink to="/" class="menuText">SIGN UP</NuxtLink></li>
             <li><NuxtLink to="/" class="menuText">LOGIN</NuxtLink></li>
         </ul>
         <ul class="menuSections" id="hamburgerOuter">
@@ -29,7 +29,6 @@ export default {
 </script>
 <style scoped>
  @import url("https://p.typekit.net/p.css?s=1&k=bre5ozt&ht=tk&f=34872.34873.34871&a=76201545&app=typekit&e=css");
-
 .outerMenu{
     margin: 0;
     z-index: 10;
@@ -58,7 +57,7 @@ export default {
 }
 
 .middleSection li{
-    padding: 16px;
+    padding: 2px;
 }
 
 .menuSections li{
@@ -66,7 +65,7 @@ export default {
     border-top: 3px solid #ffb63f;
     border-bottom: 3px solid #ffb63f;
     float: left;
-    padding: 16px;
+    padding: 12.5px;
 }
 
 .menuSections li:hover{
@@ -79,12 +78,16 @@ export default {
     font-size: 0.9rem;
     text-decoration: none;
     color: black;
+    margin-right: 0.50rem;
+    margin-left: 0.2rem;
 }
 
 .specialText{
+  margin-top: auto;
+  margin-bottom: auto;
     font-family: Arbotek,sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 0;
     font-size: 28px;
 }
 

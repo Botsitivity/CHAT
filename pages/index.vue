@@ -5,11 +5,13 @@
         <div id="form-input"> 
             <input type="text" id="text" placeholder="Send Bopy a Message!">
         </div>
-<button class="send"></button>
+<button type="submit" form="form-input" value="Submit" class="send">↑</button>
 
 <div class="circle1"></div>
 <div class="circle2"></div>
 <div class="circle3"></div>
+<div class="usermessage">whats up bro</div>
+<div class="bopymessage">whats up bro</div>
 </div>
 
 </template>
@@ -22,9 +24,31 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+.usermessage{
+  margin-top: 2rem;
+  background-color: #FFDDA6;
+  border-radius: 20rem;
+position: absolute;
+right: 5%;
+padding: 0.5rem;
+padding-left: .75rem;
+padding-right: .75rem;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.bopymessage{
+  margin-top: 7rem;
+  background-color: #E1E1E1;
+  border-radius: 20rem;
+position: absolute;
+left: 5%;
+padding: 0.5rem;
+padding-left: .75rem;
+padding-right: .75rem;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 .top{
 font-family: 'Staatliches', cursive;
-  margin-top: 7rem;
+  margin-top: 1rem;
 font-style: normal;
 font-weight: 400;
 font-size: 64px;
@@ -32,6 +56,7 @@ line-height: 80px;
 text-align: center;
 }
 .send{ 
+  font-size: 2rem;
 color: white;
 border-radius: 40rem;
 position: absolute;
@@ -41,9 +66,25 @@ left: 92%;
 bottom: 2rem;
 background: #FF653F;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+}
+.send:active{
+      animation: press 0.2s 1 linear;
+}
+@keyframes press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 #form-input{
+  outline-width: 0;
+  outline-style: none;
+  border: none;
   z-index: 1;
   position: absolute;
 width: 85%;
@@ -100,5 +141,4 @@ background: rgba(255, 182, 63, 0.75);
 transform: rotate(0.57deg);
 border-radius: 40rem;
 }
-
 </style>
