@@ -2,16 +2,25 @@
 <div class="chat">
 <Menu />
 <h2 class="top">CHAT WITH BOPY!</h2>
-        <div id="form-input"> 
-            <input type="text" id="text" placeholder="Send Bopy a Message!">
-        </div>
+
+<div class="buttons">
+  <button @click="getMessages">Restore Messages</button>
+  <button @click="endChat" v-if="messages.length != 0">End This Chat</button>
+</div>
+
+<section id="chatbox">
+  <div v-for="message in messages" :key="message.timestamp" class="message" :class="{bopymessage: message.isBopy, usermessage: !message.isBopy}">{{ message.message }}</div>
+</section>
+
+
+  <div id="form-input"> 
+    <input type="text" id="text" placeholder="Send Bopy a Message!">
+  </div>
 <button type="submit" form="form-input" value="Submit" class="send">↑</button>
 
 <div class="circle1"></div>
 <div class="circle2"></div>
 <div class="circle3"></div>
-<div class="usermessage">whats up bro</div>
-<div class="bopymessage">whats up bro</div>
 
     <div id="form-input"> 
       <input type="text" id="text" placeholder="Send Bopy a Message!" v-model="currentMessage">
@@ -35,40 +44,62 @@ export default {
   computed: {
     messages () {
       return this.$store.state.messages
+    },
+    session () {
+      return this.$store.state.sessionID
     }
   },
   methods: {
     sendMessage (message) {
       this.$store.dispatch('sendMessage', message)
+      this.currentMessage = null
+    },
+    getMessages(){
+      this.$store.dispatch('getMessageHistory')
+    },
+    endChat () {
+      this.$store.dispatch('endChat')
     }
-  }
+  },
 }
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+#chatbox {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 80vw;
+  margin: 0 auto;
+  height: 55vh;
+  z-index: 99;
+  overflow: auto;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 25vw;
+  margin: 0 auto;
+}
 .usermessage{
-  margin-top: 2rem;
   background-color: #FFDDA6;
-  border-radius: 20rem;
-position: absolute;
-right: 5%;
-padding: 0.5rem;
-padding-left: .75rem;
-padding-right: .75rem;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  align-self: flex-end;
 }
 .bopymessage{
-  margin-top: 7rem;
   background-color: #E1E1E1;
+  align-self: flex-start;
+}
+.message {
   border-radius: 20rem;
-position: absolute;
-left: 5%;
-padding: 0.5rem;
-padding-left: .75rem;
-padding-right: .75rem;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding: 0.5rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 2;
+  display: block;
+  width: fit-content;
+  margin-bottom: 1rem;
 }
 .top{
 font-family: 'Staatliches', cursive;

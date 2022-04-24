@@ -10,8 +10,10 @@
             <li><NuxtLink to="/" class="menuText specialText">BOTSITIVITY</NuxtLink></li>
         </ul>
         <ul class="menuSections">
-            <li><NuxtLink to="/" class="menuText">SIGN UP</NuxtLink></li>
-            <li><NuxtLink to="/" class="menuText">LOGIN</NuxtLink></li>
+            <li v-if="!session"><NuxtLink to="/" class="menuText">SIGN UP</NuxtLink></li>
+            <li v-if="!session"><NuxtLink to="/login" class="menuText">LOGIN</NuxtLink></li>
+            <li v-if="session"><NuxtLink to="/" class="menuText">MAIN SITE</NuxtLink></li>
+            <li v-if="session"><a @click="handleLogout()" class="menuText logout">LOGOUT</a></li>
         </ul>
         <ul class="menuSections" id="hamburgerOuter">
             <div class="hamburger" id="hamburger">
@@ -25,6 +27,17 @@
 <script>
 export default {
   name: "NuxtMenu",
+  computed: {
+    session () {
+      return this.$store.state.sessionID
+    }
+  },
+  methods: {
+    handleLogout() {
+        this.$store.dispatch('logout')
+        this.$router.push('/')
+    }
+  }
 };
 </script>
 <style scoped>
@@ -191,5 +204,9 @@ export default {
     font-size: 5vw;
     font-family: "ubuntu";
     padding: 13px;
+}
+
+.logout {
+    cursor: pointer;
 }
 </style>

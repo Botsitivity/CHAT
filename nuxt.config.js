@@ -1,6 +1,8 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: "static",
+  ssr: true,
+  mode: "universal",
+  target: "server",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -36,6 +38,7 @@ export default {
   modules: [
     // https://axios.nuxtjs.org/
     "@nuxtjs/axios",
+    "cookie-universal-nuxt",
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
