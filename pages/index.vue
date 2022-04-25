@@ -14,7 +14,7 @@
 
 
   <div id="form-input"> 
-    <input type="text" id="text" placeholder="Send Bopy a Message!">
+    <input type="text" id="text" placeholder="Send Bopy a Message!" autocomplete="false" aria-autocomplete="both">
   </div>
 <button type="submit" form="form-input" value="Submit" class="send">↑</button>
 
@@ -25,7 +25,7 @@
     <div id="form-input"> 
       <input type="text" id="text" placeholder="Send Bopy a Message!" v-model="currentMessage">
     </div>
-    <button class="send" @click="sendMessage(currentMessage)"></button>
+    <button class="send" @click="sendMessage(currentMessage)" ref="send"></button>
 
     <div class="circle1"></div>
     <div class="circle2"></div>
@@ -51,6 +51,7 @@ export default {
   },
   methods: {
     sendMessage (message) {
+      if (!message) return
       this.$store.dispatch('sendMessage', message)
       this.currentMessage = null
     },
@@ -61,11 +62,13 @@ export default {
       this.$store.dispatch('endChat')
     }
   },
-  watch:{
-    messages(update){
-      this.$refs.chatbox.scrollTop = this.$refs.chatbox.scrollHeight
-      console.log(update[update.length-1])
-    }
+  mounted(){
+    window.addEventListener("keydown", (key)=>{
+      if (key.code=="Enter") this.sendMessage(this.currentMessage)
+    })
+  },
+  updated(){
+    this.$refs.chatbox.scrollTop = this.$refs.chatbox.scrollHeight
   }
 }
 </script>
