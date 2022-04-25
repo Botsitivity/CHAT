@@ -8,7 +8,7 @@
   <button @click="endChat" v-if="messages.length != 0">End This Chat</button>
 </div>
 
-<section id="chatbox">
+<section id="chatbox" ref="chatbox">
   <div v-for="message in messages" :key="message.timestamp" class="message" :class="{bopymessage: message.isBopy, usermessage: !message.isBopy}">{{ message.message }}</div>
 </section>
 
@@ -61,6 +61,12 @@ export default {
       this.$store.dispatch('endChat')
     }
   },
+  watch:{
+    messages(update){
+      this.$refs.chatbox.scrollTop = this.$refs.chatbox.scrollHeight
+      console.log(update[update.length-1])
+    }
+  }
 }
 </script>
 
