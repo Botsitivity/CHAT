@@ -16,7 +16,6 @@
   <div id="form-input"> 
     <input type="text" id="text" placeholder="Send Bopy a Message!" autocomplete="false" aria-autocomplete="both">
   </div>
-<button type="submit" form="form-input" value="Submit" class="send">↑</button>
 
 <div class="circle1"></div>
 <div class="circle2"></div>
@@ -79,7 +78,7 @@ export default {
 #chatbox {
   display: flex;
   flex-flow: column nowrap;
-  width: 80vw;
+  width: 90vw;
   margin: 0 auto;
   height: 55vh;
   z-index: 99;
@@ -94,10 +93,12 @@ export default {
 .usermessage{
   background-color: #FFDDA6;
   align-self: flex-end;
+  margin-right: 1rem;
 }
 .bopymessage{
   background-color: #E1E1E1;
   align-self: flex-start;
+  margin-left: 1rem;
 }
 .message {
   border-radius: 20rem;
@@ -121,6 +122,7 @@ text-align: center;
 }
 .send{ 
   font-size: 2rem;
+  z-index: 1;
 color: white;
 border-radius: 40rem;
 position: absolute;
