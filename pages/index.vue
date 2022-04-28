@@ -24,7 +24,7 @@
     <div id="form-input"> 
       <input type="text" id="text" placeholder="Send Bopy a Message!" v-model="currentMessage">
     </div>
-    <button class="send" @click="sendMessage(currentMessage)" ref="send"></button>
+    <button class="send" @click="sendMessage(currentMessage)" ref="send">↑</button>
 
     <div class="circle1"></div>
     <div class="circle2"></div>
@@ -224,9 +224,9 @@ border-radius: 40rem;
   #chatbox {
   display: flex;
   flex-flow: column nowrap;
-  width: 85vw;
+  width: 94vw;
   margin: 0 auto;
-  height: 53vh;
+  height: 69vh;
   z-index: 99;
   overflow: auto;
 }
@@ -263,7 +263,7 @@ font-family: 'Staatliches', cursive;
   margin-top: 0.5rem;
 font-style: normal;
 font-weight: 400;
-font-size: 3rem;
+font-size: 2.5rem;
 line-height: 5rem;
 text-align: center;
 }
@@ -273,9 +273,9 @@ text-align: center;
 color: white;
 border-radius: 40rem;
 position: absolute;
-width: 3.75rem;
-height: 3.75rem;
-left: 85%;
+width: 3rem;
+height: 3rem;
+left: 87%;
 bottom: 2rem;
 background: #FF653F;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -300,8 +300,8 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: none;
   z-index: 9;
   position: absolute;
-  width: 80%;
-height: 3.75rem;
+  width: 82%;
+height: 3rem;
   left: 1rem;
   bottom: 2rem;
   background: #DCDCDC;
@@ -318,7 +318,7 @@ height: 3.75rem;
   font-size: 20px;
   width: 85%;
   margin-left: 2rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   vertical-align: middle;
 }
 #text:focus {
@@ -359,7 +359,7 @@ height: 3.75rem;
 
 ::-webkit-scrollbar {
 
-  width: 10px;
+  width: 8px;
 border-radius: 40rem;
 }
 ::-webkit-scrollbar-track {
