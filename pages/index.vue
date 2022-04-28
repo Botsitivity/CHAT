@@ -80,7 +80,7 @@ export default {
   flex-flow: column nowrap;
   width: 90vw;
   margin: 0 auto;
-  height: 55vh;
+  height: 60vh;
   z-index: 99;
   overflow: auto;
 }
@@ -206,5 +206,165 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: rgba(255, 182, 63, 0.75);
   transform: rotate(0.57deg);
   border-radius: 40rem;
+}
+
+::-webkit-scrollbar {
+  margin-left: 6rem;
+  width: 10px;
+border-radius: 40rem;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffb63f ;
+  border-radius: 40rem;
+}
+@media only screen and (max-width: 810px){
+  #chatbox {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 85vw;
+  margin: 0 auto;
+  height: 55vh;
+  z-index: 99;
+  overflow: auto;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 20rem;
+  margin: 0 auto;
+}
+.usermessage{
+  background-color: #FFDDA6;
+  align-self: flex-end;
+  margin-right: 1rem;
+}
+.bopymessage{
+  background-color: #E1E1E1;
+  align-self: flex-start;
+  margin-left: 1rem;
+}
+.message {
+  border-radius: 20rem;
+  padding: 0.5rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 2;
+  display: block;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+.top{
+font-family: 'Staatliches', cursive;
+  margin-top: 0.5rem;
+font-style: normal;
+font-weight: 400;
+font-size: 3rem;
+line-height: 5rem;
+text-align: center;
+}
+.send{ 
+  z-index: 10;
+  font-size: 2rem;
+color: white;
+border-radius: 40rem;
+position: absolute;
+width: 3.75rem;
+height: 3.75rem;
+left: 85%;
+bottom: 2rem;
+background: #FF653F;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.send:active{
+      animation: press 0.2s 1 linear;
+}
+@keyframes press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+#form-input{
+  outline-width: 0;
+  outline-style: none;
+  border: none;
+  z-index: 9;
+  position: absolute;
+  width: 80%;
+height: 3.75rem;
+  left: 1rem;
+  bottom: 2rem;
+  background: #DCDCDC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 45px;
+}
+#text {
+  color: black;
+  background-color: transparent;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-weight: bolder;
+  font-size: 20px;
+  width: 85%;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  vertical-align: middle;
+}
+#text:focus {
+  outline: none
+}
+.circle1 {
+  position: absolute;
+  width: 16rem;
+  height: 16rem;
+  left: 7.5rem;
+  top: 32rem;
+  background: rgba(255, 163, 132, 0.75);
+  transform: rotate(0.57deg);
+  border-radius: 40rem;
+}
+.circle2 {
+  position: absolute;
+  width: 13rem;
+  height: 13rem;
+  left: 5rem;
+  top: 28rem;
+  background: rgba(246, 147, 141, 0.85);
+  transform: rotate(0.57deg);
+  border-radius: 40rem;
+}
+.circle3 {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  left: 2rem;
+  top: 35rem;
+  background: rgba(255, 182, 63, 0.75);
+  transform: rotate(0.57deg);
+  border-radius: 40rem;
+}
+
+::-webkit-scrollbar {
+
+  width: 10px;
+border-radius: 40rem;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffb63f ;
+  border-radius: 40rem;
+}
 }
 </style>
