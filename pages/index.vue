@@ -94,11 +94,13 @@ export default {
   background-color: #FFDDA6;
   align-self: flex-end;
   margin-right: 1rem;
+    z-index: 12;
 }
 .bopymessage{
   background-color: #E1E1E1;
   align-self: flex-start;
   margin-left: 1rem;
+  z-index: 12;
 }
 .message {
   border-radius: 20rem;
@@ -241,11 +243,13 @@ border-radius: 40rem;
   background-color: #FFDDA6;
   align-self: flex-end;
   margin-right: 1rem;
+z-index: 11;
 }
 .bopymessage{
   background-color: #E1E1E1;
   align-self: flex-start;
   margin-left: 1rem;
+z-index:11;
 }
 .message {
   border-radius: 20rem;
@@ -253,7 +257,7 @@ border-radius: 40rem;
   padding-left: .75rem;
   padding-right: .75rem;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  z-index: 2;
+  z-index: 11;
   display: block;
   width: fit-content;
   margin-bottom: 1rem;
@@ -333,7 +337,7 @@ height: 3rem;
   background: rgba(255, 163, 132, 0.75);
   transform: rotate(0.57deg);
   border-radius: 40rem;
-  z-index: 3;
+  z-index: 2;
 }
 .circle2 {
   position: absolute;
@@ -344,9 +348,10 @@ height: 3rem;
   background: rgba(246, 147, 141, 0.80);
   transform: rotate(0.57deg);
   border-radius: 40rem;
+      z-index: 1;
 }
 .circle3 {
-    z-index: 4;
+    z-index: 3;
   position: absolute;
   width: 10rem;
   height: 10rem;
