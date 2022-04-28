@@ -226,7 +226,7 @@ border-radius: 40rem;
   flex-flow: column nowrap;
   width: 85vw;
   margin: 0 auto;
-  height: 55vh;
+  height: 53vh;
   z-index: 99;
   overflow: auto;
 }
@@ -234,6 +234,7 @@ border-radius: 40rem;
   display: flex;
   justify-content: space-around;
   width: 20rem;
+  padding-bottom: 2rem;
   margin: 0 auto;
 }
 .usermessage{
@@ -325,31 +326,33 @@ height: 3.75rem;
 }
 .circle1 {
   position: absolute;
-  width: 16rem;
-  height: 16rem;
-  left: 7.5rem;
-  top: 32rem;
+  width: 11.5rem;
+  height: 11.5rem;
+  left: 8.5rem;
+  top: 30rem;
   background: rgba(255, 163, 132, 0.75);
   transform: rotate(0.57deg);
   border-radius: 40rem;
+  z-index: 3;
 }
 .circle2 {
   position: absolute;
-  width: 13rem;
-  height: 13rem;
-  left: 5rem;
-  top: 28rem;
-  background: rgba(246, 147, 141, 0.85);
+  width: 14rem;
+  height: 14rem;
+  left: 3.5rem;
+  top: 24rem;
+  background: rgba(246, 147, 141, 0.80);
   transform: rotate(0.57deg);
   border-radius: 40rem;
 }
 .circle3 {
+    z-index: 4;
   position: absolute;
   width: 10rem;
   height: 10rem;
   left: 2rem;
-  top: 35rem;
-  background: rgba(255, 182, 63, 0.75);
+  top: 32.5rem;
+  background: rgba(255, 182, 63, 0.76);
   transform: rotate(0.57deg);
   border-radius: 40rem;
 }
