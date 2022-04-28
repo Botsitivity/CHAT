@@ -103,7 +103,7 @@ export default {
   z-index: 12;
 }
 .message {
-  border-radius: 20rem;
+  border-radius: 30px;
   padding: 0.5rem;
   padding-left: .75rem;
   padding-right: .75rem;
@@ -252,7 +252,7 @@ z-index: 11;
 z-index:11;
 }
 .message {
-  border-radius: 20rem;
+  border-radius: 20px;
   padding: 0.5rem;
   padding-left: .75rem;
   padding-right: .75rem;
@@ -279,7 +279,7 @@ border-radius: 40rem;
 position: absolute;
 width: 3rem;
 height: 3rem;
-left: 87%;
+left: 85.5%;
 bottom: 2rem;
 background: #FF653F;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -304,7 +304,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: none;
   z-index: 9;
   position: absolute;
-  width: 82%;
+  width: 80%;
 height: 3rem;
   left: 1rem;
   bottom: 2rem;
