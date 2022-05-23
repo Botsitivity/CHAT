@@ -23,7 +23,7 @@
 <div class="circle3"></div>
 
     <div id="form-input"> 
-      <input type="text" id="text" placeholder="Send Bopy a Message!" v-model="currentMessage">
+      <input type="text" id="text" placeholder="Send Bopy a Message!" v-model="currentMessage" autocomplete="off">
     </div>
     <button class="send" @click="sendMessage(currentMessage)"></button>
 
