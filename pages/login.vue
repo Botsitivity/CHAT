@@ -5,7 +5,7 @@
         <form @submit.prevent="handleSubmit">
             <label class="labeltext" for="email"> Email : </label>
             <input id="input" type="email" v-model="email" placeholder="E-mail">
-                   <label class="labeltext" for="password"> Password : </label>
+            <label class="labeltext" for="password"> Password : </label>
             <input id="input" type="password" v-model="password" placeholder="Password">
             <input id="button" type="submit">
         </form>
@@ -55,7 +55,7 @@ export default {
 }
 h1{
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
     font-size: 2rem;
     font-family: "Ubuntu",sans-serif;
     font-weight: bolder;
@@ -76,6 +76,7 @@ h1{
 #button{
     margin-left: auto;
     margin-right: auto;
+    margin-top: 3rem;
     display: block;
     cursor: pointer;
     background-color: #ffb63f;
@@ -99,5 +100,24 @@ margin-top: 2%;
 form{
     text-align: center;
     
+}
+@media only screen and (max-width: 810px){
+    #body{
+    background-color:  #eee;
+    height: 500vw;
+}
+.labeltext{
+    font-family: "Ubuntu",sans-serif;
+    display: block;
+text-align: center;
+margin-top: 3rem;
+}
+h1{
+    padding-top: 8rem;
+    margin-top: 0;
+}
+#input{
+    width: 18rem;
+}
 }
 </style>
