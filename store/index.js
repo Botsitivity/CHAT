@@ -65,8 +65,8 @@ export const actions = {
     this.$cookies.remove("session");
   },
   async sendMessage(context, message) {
-    console.log(message);
-    console.log(this.state);
+    // console.log(message);
+    // console.log(this.state);
     const timestamp = Date.now();
     const payload = { message: message, timestamp: timestamp };
     context.commit("addMessage", payload);
