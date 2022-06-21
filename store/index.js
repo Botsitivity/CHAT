@@ -1,5 +1,240 @@
 export const state = () => ({
-  messages: [],
+  messages: [
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true,
+      isBopy: true
+    },
+    {
+      message: "test",
+      timestamp: null,
+      sessionID: null,
+      end: true
+    },
+  ],
   sessionID: null,
 });
 
