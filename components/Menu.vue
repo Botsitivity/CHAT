@@ -199,7 +199,6 @@ export default {
     transform: translateX(-100%);
 }
 
-
 .hamburgerSections li{
     font-size: 5vw;
     font-family: "ubuntu";
@@ -208,5 +207,10 @@ export default {
 
 .logout {
     cursor: pointer;
+}
+@media only screen and (max-width: 810px){
+    .outerMenu{
+        display: none;
+    }
 }
 </style>
