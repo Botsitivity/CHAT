@@ -30,7 +30,7 @@ export default {
         async handleSubmit() {
             try {
                 await this.$store.dispatch('login', { email: this.email, password: this.password })  
-                this.$router.push('/chat')
+                this.$router.push('/')
             } catch (err) {
                 this.error = err
             }
