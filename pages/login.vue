@@ -1,5 +1,8 @@
 <template>
     <div id="body">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
         <Menu />
         <h1>Login Page</h1>
         <form @submit.prevent="handleSubmit">
@@ -27,7 +30,7 @@ export default {
         async handleSubmit() {
             try {
                 await this.$store.dispatch('login', { email: this.email, password: this.password })  
-                this.$router.push('/')
+                this.$router.push('/chat')
             } catch (err) {
                 this.error = err
             }
@@ -37,11 +40,10 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Ubuntu:wght@300&display=swap');
+
 #body{
     background-color:  #eee;
-    height: 60vw;
+    height: 100vh;
 }
 .labeltext{
     text-align: left;

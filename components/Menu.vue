@@ -7,10 +7,10 @@
             <li><NuxtLink to="/" class="menuText underline">CONTACT US</NuxtLink></li>
         </ul>
         <ul class="middleSection">
-            <li><NuxtLink to="/" class="menuText specialText">BOTSITIVITY</NuxtLink></li>
+            <li><a href="https://botsitivity.org" class="menuText specialText">BOTSITIVITY</a></li>
         </ul>
         <ul class="menuSections">
-            <li v-if="!session"><NuxtLink to="/" class="menuText">SIGN UP</NuxtLink></li>
+            <li v-if="!session"><a href="https://botsitivity.org/signup" class="menuText">SIGN UP</a></li>
             <li v-if="!session"><NuxtLink to="/login" class="menuText">LOGIN</NuxtLink></li>
             <li v-if="session"><NuxtLink to="/" class="menuText">MAIN SITE</NuxtLink></li>
             <li v-if="session"><a @click="handleLogout()" class="menuText logout">LOGOUT</a></li>

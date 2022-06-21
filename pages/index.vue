@@ -1,5 +1,9 @@
 <template>
   <div class="chat">
+    <LiabilityWaiver/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <div ref="menu"><Menu  /></div>
     <div ref="options">
       <h2 class="top">CHAT WITH BOPY!</h2>
@@ -80,6 +84,7 @@ export default {
     }
   },
   mounted() {
+    if (!this.session) this.$router.push('/login')
     this.resize()
     window.addEventListener("resize", this.resize)
     window.addEventListener("keydown", (key) => {
@@ -93,8 +98,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 .chat-space {
   height: 100vh;
   display: grid;
