@@ -84,6 +84,10 @@ export default {
     }
   },
   mounted() {
+    if (window.location.hostname === 'localhost') {
+      this.$store.dispatch('setDomain')
+      console.log('domain changed to undefined')
+    }
     if (!this.session) this.$router.push('/login')
     this.resize()
     window.addEventListener("resize", this.resize)

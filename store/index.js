@@ -1,6 +1,7 @@
 export const state = () => ({
   messages: [],
   sessionID: null,
+  cookieDomain: "botsitivity.org",
 });
 
 export const mutations = {
@@ -13,6 +14,9 @@ export const mutations = {
   addSession(state, id) {
     state.sessionID = id;
   },
+  setDomain(state) {
+    state.cookieDomain = undefined;
+  },
 };
 
 export const actions = {
@@ -20,6 +24,9 @@ export const actions = {
     if (this.$cookies.get("session")) {
       commit("addSession", this.$cookies.get("session"));
     }
+  },
+  async setDomain(context) {
+    context.commit("setDomain");
   },
   async getMessageHistory(context) {
     console.log("get message history");
@@ -52,7 +59,9 @@ export const actions = {
     });
     if (login.code == 200) {
       context.commit("addSession", login.session);
-      this.$cookies.set("session", login.session);
+      this.$cookies.set("session", login.session, {
+        domain: this.cookieDomain,
+      });
       await context.dispatch("getMessageHistory");
     } else if (login.code == 403) {
       throw new Error("User suspended");
@@ -62,7 +71,7 @@ export const actions = {
   },
   async logout(context) {
     context.commit("addSession", null);
-    this.$cookies.remove("session");
+    this.$cookies.remove("session", { domain: this.cookieDomain });
   },
   async sendMessage(context, message) {
     // console.log(message);
