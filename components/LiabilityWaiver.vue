@@ -9,22 +9,24 @@
           </h2>
           <p class="c1"><span class="c0"></span></p>
           <p class="c8">
-            <span class="c3">I hereby release and forever discharge </span
+            <span class="c3">I hereby release and discharge </span
             ><span class="c7 c9">BOTSITIVITY</span
             ><span class="c3"
-              >, from all liability and hereby assume all of the risks of my
-              participation and usage of services provided by </span
-            ><span class="c7 c9">BOTSITIVITY</span><span class="c0">. &nbsp;</span>
+              >, from all liability and hereby assume all of potential risks involving my personal health, including but not limited to worsening and negligence of my health conditions, damages and injuries to myself and others, of my participation and usage of services provided by </span
+            ><span class="c7 c9">BOTSITIVITY</span><span class="c0">. &nbsp;</span><span class="c3">, until my account is terminated.</span
+            >
           </p>
           <p class="c1"><span class="c0"></span></p>
           <p class="c8">
-            <span class="c3">It is understood and agreed that the use of the </span
+            <span class="c3">I understand and agree that the use of the </span
             ><span class="c7 c9">BOTSITIVITY</span
             ><span class="c0"
-              >&nbsp;bot cannot guarantee the cure of depression, anxiety, or any
+              >&nbsp;bot does not guarantee the cure of depression, anxiety, or any
               other mental health disorders. This service is completely free of
-              charge and cannot guarantee the complete settlement and satisfaction
-              of users.
+              charge and does not guarantee the complete settlement and satisfaction
+              of users.</span><span class="c3">The use of </span
+            ><span class="c7 c9">BOTSITIVITY </span
+            ><span class="c3">does not substitute the treatment of a medical professional
             </span>
           </p>
           <p class="c1"><span class="c0"></span></p>
