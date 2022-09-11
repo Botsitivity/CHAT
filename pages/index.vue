@@ -8,7 +8,7 @@
     <div ref="options">
       <h2 class="top">CHAT WITH BOPY!</h2>
       <div class="buttons">
-        <button @click="getMessages">Restore Messages</button>
+        <button @click="getMessages" v-if="!session || !session.startsWith('anonymous')">Restore Messages</button>
         <button @click="endChat" v-if="messages.length != 0">
           End This Chat
         </button>

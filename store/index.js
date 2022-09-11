@@ -69,6 +69,9 @@ export const actions = {
       throw new Error(login.message);
     }
   },
+  async joinAnon(context, { time }) {
+    context.commit("addSession", `anonymous-${time}`);
+  },
   async logout(context) {
     context.commit("addSession", null);
     this.$cookies.remove("session", { domain: this.cookieDomain });

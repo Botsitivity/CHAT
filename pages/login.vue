@@ -12,6 +12,7 @@
             <input id="input" type="password" v-model="password" placeholder="Password">
             <input id="button" type="submit">
         </form>
+        <button @click="handleAnon" id="anon">Continue Anonymously</button>
         <p>{{ error }}</p>
     </div>
 </template>
@@ -30,6 +31,14 @@ export default {
         async handleSubmit() {
             try {
                 await this.$store.dispatch('login', { email: this.email, password: this.password })  
+                this.$router.push('/')
+            } catch (err) {
+                this.error = err
+            }
+        },
+        async handleAnon() {
+            try {
+                await this.$store.dispatch('joinAnon', { time: Date.now() })
                 this.$router.push('/')
             } catch (err) {
                 this.error = err
@@ -91,9 +100,30 @@ h1{
     height: 56px;
     border: none;
     border-radius: 15px;
-        font-family: Nunito, sans-serif;
+    font-family: Nunito, sans-serif;
     color: rgb(51, 71, 86);
 }
+#anon {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    display: block;
+    cursor: pointer;
+    background-color: #423fff;
+    text-decoration: none;
+    font-family: "Oswald",sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    outline: none;
+    width: fit-content;
+    padding: 15px;
+    height: 56px;
+    border: none;
+    border-radius: 15px;
+    font-family: Nunito, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
 p{
 text-align: center;
 margin-top: 2%;
