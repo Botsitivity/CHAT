@@ -33,7 +33,7 @@ export default {
     methods: {
         async handleSubmit() {
             try {
-                // await this.$store.dispatch('login', { email: this.email, password: this.password });
+                await this.$store.dispatch('login', { email: this.email, password: this.password });
                 this.signed_in = true;
             }
             catch (err) {
