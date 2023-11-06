@@ -12,30 +12,36 @@
             <input id="input" type="password" v-model="password" placeholder="Password">
             <input id="button" type="submit">
         </form>
+        <LiabilityWaiver v-if="signed_in"/>
         <p>{{ error }}</p>
     </div>
 </template>
 
 <script>
+import LiabilityWaiver from '../components/LiabilityWaiver.vue'
+
 export default {
     name: "Login",
     data() {
         return {
             email: null,
             password: null,
-            error: null
-        }
+            error: null,
+            signed_in: false
+        };
     },
     methods: {
         async handleSubmit() {
             try {
-                await this.$store.dispatch('login', { email: this.email, password: this.password })  
-                this.$router.push('/')
-            } catch (err) {
-                this.error = err
+                // await this.$store.dispatch('login', { email: this.email, password: this.password });
+                this.signed_in = true;
+            }
+            catch (err) {
+                this.error = err;
             }
         }
-    }
+    },
+    components: { LiabilityWaiver }
 }
 </script>
 

@@ -64,7 +64,7 @@
         </div>
     </div>
     <div class="mt-2">
-        <label class="container">I have read and gree to sign the BOTSITIVITY Bot Usage Liability Waiver
+        <label class="container">I have read and agree to sign the BOTSITIVITY Bot Usage Liability Waiver
             <input type="checkbox" ref="agree">
             <span class="checkmark"></span>
         </label>
@@ -576,8 +576,9 @@ export default {
     submit(){
         if (!this.$refs.agree.checked) this.error = "Please agree to the terms"
         else{
-            this.$destroy();
-            this.$el.parentNode.removeChild(this.$el);
+            window.location.replace("http://bopy.botsitivity.org")
+            // this.$destroy();
+            // this.$el.parentNode.removeChild(this.$el);
         }
     }
   }
